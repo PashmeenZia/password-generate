@@ -69,6 +69,7 @@ def check_password_strength(password):
     #display password strength results
     if score == 4:
         st.success("✅ **Strong Password** - Your password is very strong and secure!.")
+         st.balloons()
     elif score == 3:
         st.info("⚠️ **Moderate Password** -Consider improving security by adding more features.")                       
     else:
@@ -85,6 +86,5 @@ password = st.text_input("Enter your password:", type="password", help="Ensure y
 if st.button("Check Strength"):
     if password:
         check_password_strength(password)
-        st.balloons()
     else:
         st.warning("⚠️ Please enter a password first!") #show warning if password empty    
